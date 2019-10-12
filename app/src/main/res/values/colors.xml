@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="background">#ffffff</color>
+    <color name="textColor">#191F19</color>
+    <color name="editTextColor">#7F857F</color>
+    <color name="specialColor">#4CAF50</color>
+    <color name="checkColor">#FD5056</color>
+    <color name="badPassword">#FA2A46</color>
+    <color name="normalPassword">#FDDC11</color>
+    <color name="goodPassword">#41FF49</color>
+</resources>

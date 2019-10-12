@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_password"
+            android:textColor="@color/textColor"
+            android:gravity="center"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/result_background"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="@dimen/resultTextSize"
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                tools:text="Result" />
+
+            <ImageButton
+                android:id="@+id/txtPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:background="@color/background"
+                android:src="@drawable/ic_button_foreground" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTxtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/textColor"
+            android:backgroundTint="@color/checkColor"
+            android:textColorHint="@color/editTextColor"
+            android:hint="@string/enter_password_hint"
+            android:imeOptions="flagNoExtractUi" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtPasswordСomplexity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/initialComplexityTxt"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/editTextColor"
+                android:paddingLeft="@dimen/activity_padding"
+                android:paddingStart="@dimen/activity_padding"
+                android:layout_toLeftOf="@id/imgPasswordСomplexity"
+                android:layout_toStartOf="@id/imgPasswordСomplexity"
+                tools:text="@string/badPassword"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/imgPasswordСomplexity"
+                android:layout_width="55dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/password" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/editTextColor"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/textColor"
+            android:text="@string/generatePassword" />
+
+        <CheckBox
+            android:id="@+id/checkboxUpLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:buttonTint="@color/checkColor"
+            android:text="@string/upLetters" />
+
+        <CheckBox
+            android:id="@+id/checkboxNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:buttonTint="@color/checkColor"
+            android:text="@string/numbers" />
+
+        <CheckBox
+            android:id="@+id/checkboxSpecialSimbols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:buttonTint="@color/checkColor"
+            android:text="@string/specialSymbols" />
+
+        <SeekBar
+            android:id="@+id/seekPasswordLength"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@color/editTextColor"
+            android:progressTint="@color/checkColor"
+            android:thumbTint="@color/checkColor"
+            android:max="10"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/txtPasswordLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/editTextColor"
+            android:text="@string/initialString"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/result_background"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtGenerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/resultTextSize"
+                tools:text="Generated" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/background"
+                android:enabled="false"
+                android:src="@drawable/ic_button_foreground" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_padding"
+            android:textColor="@color/background"
+            android:background= "@color/specialColor"
+            android:text="@string/generate" />
+
+    </LinearLayout>
+</ScrollView>
